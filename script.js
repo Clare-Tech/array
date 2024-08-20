@@ -33,3 +33,36 @@ const ages = [64,12,30]
 console.log(ages.slice(-1)[0]);
 console.log(ages[ages.length - 1]);
 console.log(ages.at(-1));
+
+// array method
+const fruits = []
+fruits.push("Banana", "Mango", "Apple")
+console.log(fruits);
+
+
+// ----
+const movements = [200, 250, -400, 3000, -650, -130, 70, 1300]
+console.log(movements.entries());
+console.log(Object.entries(movements));
+
+
+for(let [index, movement] of movements.entries()){
+    if(movement > 0){
+        document.write(`Movement ${index+1}: You deposited $${movement}</br>`);
+        
+    }else{
+        document.write(`Movement ${index+1}: You withdrew $${Math.abs(movement)}</br>`);
+        
+    }
+}
+document.write("----------using forEach()--------------")
+// or use the forEach() method
+movements.forEach(function(movement, index, array){
+    if(movement>0){
+        document.write(`${index+1}You deposited ${movement}</br>`);
+        
+    }else{+1
+        document.write(`${index+1}You withdrew $${Math.abs(movement)}</br>`);
+        
+    }
+})
